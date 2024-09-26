@@ -23,11 +23,11 @@ body {
 
 #fotoPerfil{
   display: block;
-  border-radius: 50%;
-  border: 2px solid #333;
-  width: 70px; 
-  height: 120px; 
-  margin: 20px; 
+  margin: 25px; 
+  width: 5em;
+  border: 1px solid rgb(211,211,211,0.5);
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
 }
 
 .topnav {
