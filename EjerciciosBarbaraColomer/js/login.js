@@ -6,7 +6,7 @@ function acceso() {
     while (!accesoPermitido) {
         const username = prompt("Por favor, ingrese su nombre de usuario:");
         const userpass = prompt("Por favor, ingrese la contraseña");
-        if (username === "Profesor" && userpass === "Jota") {
+        if (username === "Jota" && userpass === "dejame") {
             accesoPermitido = true;
             alert("Credenciales correctas. Accediendo...");
             document.getElementById("mainContent").style.display = "block";
