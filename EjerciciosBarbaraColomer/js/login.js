@@ -2,13 +2,22 @@
 
 function acceso() {
     alert("Bienvenido!");
-    const username = prompt("Por favor, ingrese su nombre de usuario:");
-    const userpass = prompt("Por favor, ingrese la contraseña");
-    if (username === "Profesor" && userpass === "Jota") {
-        alert("Credenciales correctas. Accediendo...");
-        document.getElementById("mainContent").style.display = "block";
-    } else {
-        alert("Las credenciales ingresadas no son válidas.");
+    let accesoPermitido = false;
+    while (!accesoPermitido) {
+        const username = prompt("Por favor, ingrese su nombre de usuario:");
+        const userpass = prompt("Por favor, ingrese la contraseña");
+        if (username === "Profesor" && userpass === "Jota") {
+            accesoPermitido = true;
+            alert("Credenciales correctas. Accediendo...");
+            document.getElementById("mainContent").style.display = "block";
+        } else {
+            alert("Las credenciales ingresadas no son válidas.");
+            let reintento = confirm("¿Desea intentarlo de nuevo?");
+            if (!reintento) {
+                accesoPermitido = true;
+                alert("Cancelando intento de acceso.");
+            }
+        }
     }
 }
 window.onload = function () {

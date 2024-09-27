@@ -50,6 +50,9 @@ body {
   color: rgb(174, 45, 152);
 }
 
+#mainContent{
+    display: none;
+}
 
 .container {
   display: flex;
