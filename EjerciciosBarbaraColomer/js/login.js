@@ -5,7 +5,19 @@ function acceso() {
     let accesoPermitido = false;
     while (!accesoPermitido) {
         const username = prompt("Por favor, ingrese su nombre de usuario:");
-        const userpass = prompt("Por favor, ingrese la contraseña");
+        if (username === null) {
+            alert("Cancelando intento de acceso.");
+            accesoPermitido = true;
+            break;
+        }
+
+        const userpass = prompt("Por favor, ingrese la contraseña:");
+
+        if (userpass === null) {
+            alert("Cancelando intento de acceso.");
+            accesoPermitido = true;
+            break;
+        }
         if (username === "Jota" && userpass === "dejame") {
             accesoPermitido = true;
             alert("Credenciales correctas. Accediendo...");
