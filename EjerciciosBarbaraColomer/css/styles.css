@@ -54,6 +54,14 @@ body {
     display: none;
 }
 
+#navContent{
+    display: none;
+}
+
+#picContent{
+    display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;

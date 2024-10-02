@@ -4,14 +4,17 @@ function acceso() {
     alert("Bienvenido!");
     let accesoPermitido = false;
     while (!accesoPermitido) {
-        const username = prompt("Por favor, ingrese su nombre de usuario:");
+        const username = prompt(
+            "Por favor, ingrese su nombre de usuario:",
+            "Jota"
+        );
         if (username === null) {
             alert("Cancelando intento de acceso.");
             accesoPermitido = true;
             break;
         }
 
-        const userpass = prompt("Por favor, ingrese la contraseña:");
+        const userpass = prompt("Por favor, ingrese la contraseña:", "dejame");
 
         if (userpass === null) {
             alert("Cancelando intento de acceso.");
@@ -22,6 +25,8 @@ function acceso() {
             accesoPermitido = true;
             alert("Credenciales correctas. Accediendo...");
             document.getElementById("mainContent").style.display = "block";
+            document.getElementById("navContent").style.display = "block";
+            document.getElementById("picContent").style.display = "block";
         } else {
             alert("Las credenciales ingresadas no son válidas.");
             let reintento = confirm("¿Desea intentarlo de nuevo?");
