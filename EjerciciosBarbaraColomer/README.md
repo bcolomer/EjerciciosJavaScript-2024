@@ -17,13 +17,11 @@ Este proyecto es una demostración de los conceptos fundamentales de JavaScript 
 
 El proyecto está compuesto por los siguientes archivos y carpetas:
 
-- **login.html**: Archivo que solicita informacion de usuario.
-- **index.html**: Archivo principal que muestra la estructura y contenido HTML.
+- **index.html**: Archivo que solicita informacion de usuario.
 - **img/**: Carpeta que contiene imágenes como el `favicon.ico` y la foto de perfil (`perfil.jpg`).
 - **css/**: Carpeta que contiene los estilos CSS (`styles.css`).
 - **js/**: Carpeta con el archivo JavaScript para la lógica de inicio de sesión (`login.js`).
-- **ejercicios/**: Carpeta que contiene subcarpetas para cada ejercicio.
-
+- **ejercicios/**: Carpeta que contiene subcarpetas para cada ejercicio y un index con el archivo principal que muestra la estructura y contenido HTML.
 ---
 
 ## Funcionalidades
