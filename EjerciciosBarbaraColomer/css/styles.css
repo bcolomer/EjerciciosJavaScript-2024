@@ -49,7 +49,7 @@ body {
   background-color: rgb(128,128,128,0.25);
   color: rgb(174, 45, 152);
 }
-
+/* 
 #mainContent{
     display: none;
 }
@@ -63,7 +63,7 @@ body {
 }
 
 
-
+ */
 
 .container {
   display: flex;
