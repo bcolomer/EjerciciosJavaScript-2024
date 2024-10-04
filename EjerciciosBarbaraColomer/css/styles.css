@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-  background-color: rgb(38, 120, 124); ;
+  background-color: #26787c; ;
   text-align: center;
   padding: 5px;
   color: rgb(255,250,250,0.90);
@@ -32,7 +32,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: rgba(68, 203, 161, 0.5);
+  background-color: #44cba180;
 }
 
 .topnav a {
@@ -61,6 +61,11 @@ body {
 #picContent{
     display: none;
 }
+
+#loginContent{
+    display: block;
+}
+
 
 .container {
   display: flex;
@@ -103,6 +108,11 @@ body {
   color: rgb(104, 48, 118);
   text-shadow: 2px 2px 4px rgb(0,0,0,0.25);
 }
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
   .container {

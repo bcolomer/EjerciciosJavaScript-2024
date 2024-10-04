@@ -1,10 +1,29 @@
 "use strict";
 
 function acceso() {
-    alert("Bienvenido!");
-    let accesoPermitido = false;
-    while (!accesoPermitido) {
-        const username = prompt(
+    document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+            // Evita que el formulario se envíe de manera predeterminada
+            event.preventDefault();
+
+            // guardo en variables la informacion ingresada por el formulario
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Si la validación es correcta, redirige a la nueva URL
+            if (username === "Jota" && password === "dejame") {
+                window.location.href = "./index.html"; // Redirige a la página que desees
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        });
+}
+
+window.onload = function () {
+    acceso();
+};
+/* const username = prompt(
             "Por favor, ingrese su nombre de usuario:",
             "Jota"
         );
@@ -27,6 +46,7 @@ function acceso() {
             document.getElementById("mainContent").style.display = "block";
             document.getElementById("navContent").style.display = "block";
             document.getElementById("picContent").style.display = "block";
+            document.getElementByid("loginContent").style.display = "none";
         } else {
             alert("Las credenciales ingresadas no son válidas.");
             let reintento = confirm("¿Desea intentarlo de nuevo?");
@@ -37,6 +57,5 @@ function acceso() {
         }
     }
 }
-window.onload = function () {
-    acceso();
-};
+
+    */
