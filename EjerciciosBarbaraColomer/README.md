@@ -93,6 +93,9 @@ Los estilos están definidos en el archivo `styles.css` y se destacan por:
 
 ---
 
+## Comentarios
+ He decidido no utilizar el required en los input para poder poner un mensaje mas amigable dentro del mismo formulario
+
 ## Autor
 
 - **Barbara Colomer 2024** - Desarrollo del contenido y diseño del proyecto.

@@ -1,37 +1,16 @@
-
-
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-
-
-/**{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-html,body{
-  height: 100%;
-}
-body{
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  margin:0;
-  /*background: #dde1e7;*/
- /*text-align: center;
-}*/
 
 .contentForm{
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 330px;
+  width: 100%;
+  max-width: 400px;;
   padding: 40px 30px;
   background: #dde1e7;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 .contentForm .text{
     text-align: center;
@@ -40,12 +19,19 @@ body{
   margin-bottom: 35px;
   color: #1b5356;
 }
+.text {
+  margin-bottom: 40px; 
+  padding-bottom: 40px;;
+  font-size: 24px;
+  text-align: center; 
+}
 .field{
+padding: 20px;
   height: 50px;
   width: 100%;
   display: flex;
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 30px;
 }
 .field:nth-child(2){
   margin-top: 20px;
@@ -54,7 +40,9 @@ body{
 .field input{
   height: 100%;
   width: 100%;
-  padding-left: 45px;
+  padding-left: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
   outline: none;
   border: none;
   font-size: 18px;
@@ -75,23 +63,22 @@ body{
   line-height: 50px;
 }
 .field label{
-/*   position: absolute;
- */  /**/ top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+   top: -15%;
   left: 45px; 
   pointer-events: none;
   color: #666666;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
-.field input:valid ~ label{
-  opacity: 0;
-}
+
 .forgot-pass{
   text-align: left;
   margin: 10px 0 10px 5px;
 }
 
 button{
-  margin: 15px 0;
+  margin: 0;
   width: 100%;
   height: 50px;
   font-size: 18px;
@@ -112,27 +99,39 @@ button:focus{
              inset -5px -5px 10px #ffffff73;
 }
 
+.error-message {
+    position: relative;
+    color: red;
+    font-size: 20px;
+    top: -25px;
+}
+
 /* Estilos para versiones móviles */
 @media only screen and (max-width: 600px) {
-  .content .text {
-    font-size: 24px; 
+  .contentForm {
+    padding: 20px; 
+    max-width: 90%; 
   }
-  
+
+  .contentForm .text {
+    font-size: 20px; 
+    margin-bottom: 20px; 
+  }
   .field input {
     font-size: 16px; 
+    padding-left: 10px; /
   }
 
   button {
     font-size: 16px; 
+    height: 45px; 
+  }
+  
+  
+  .field {
+    padding: 10px; 
+    margin-bottom: 20px;
   }
 }
-.error {
-    color: red;
-    visibility: hidden;
-    font-size: 0.8em;
-}
-.error-message {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px; 
-}
+
+

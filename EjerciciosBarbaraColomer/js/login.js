@@ -1,5 +1,51 @@
 "use strict";
 
+// Función para validar el usuario
+function validarUsuario(username) {
+    // Expresión regular para solo letras y longitud mínima de 3 caracteres
+    const usernameRegex = /^[A-Za-z]{3,}$/;
+    let result = true;
+
+    // Limpiar mensajes de error anteriores
+    document.getElementById("userError").innerText = "";
+
+    // Validar el usuario con regex
+    if (username === "") {
+        document.getElementById("userError").innerText =
+            "Por favor, ingrese un usuario.";
+        result = false;
+    } else if (!usernameRegex.test(username)) {
+        document.getElementById("userError").innerText =
+            "El usuario debe tener al menos 3 caracteres y solo puede contener letras.";
+        result = false;
+    }
+
+    return result;
+}
+
+// Función para validar la contraseña
+function validarPassword(password) {
+    // Limpiar mensajes de error anteriores
+    document.getElementById("passwordErrorMessage").innerText = "";
+    let result = true;
+
+    // Validar la contraseña
+    if (password === "") {
+        document.getElementById("passwordErrorMessage").innerText =
+            "Por favor, ingrese una contraseña.";
+        result = false;
+    }
+
+    return result;
+}
+
+// Función para validar ambas credenciales (usuario y contraseña correctos)
+function credencialesCorrectas(username, password) {
+    // Verifica si las credenciales exactas son correctas
+    return username === "Jota" && password === "dejame";
+}
+
+// Función principal de acceso
 function acceso() {
     document
         .getElementById("loginForm")
@@ -7,55 +53,41 @@ function acceso() {
             // Evita que el formulario se envíe de manera predeterminada
             event.preventDefault();
 
-            // guardo en variables la informacion ingresada por el formulario
-            const username = document.getElementById("username").value;
+            // Guardar en variables la información ingresada por el formulario
+            const username = document.getElementById("username").value.trim();
             const password = document.getElementById("password").value;
 
-            // Si la validación es correcta, redirige a la nueva URL
-            if (username === "Jota" && password === "dejame") {
-                window.location.href = "./index.html"; // Redirige a la página que desees
-            } else {
-                alert("Usuario o contraseña incorrectos");
+            // Limpiar mensajes de error generales
+            document.getElementById("generalErrorMessage").innerText = "";
+
+            // Validar usuario y contraseña
+            const esUsuarioValido = validarUsuario(username);
+            const esPasswordValida = validarPassword(password);
+
+            // Si ambos campos pasan la validación de campos vacíos, verificar si las credenciales son correctas
+            if (esUsuarioValido && esPasswordValida) {
+                if (!credencialesCorrectas(username, password)) {
+                    // Mostrar mensaje de error general si las credenciales no coinciden
+                    document.getElementById("generalErrorMessage").innerText =
+                        "Los datos ingresados no son válidos. Por favor, inténtelo nuevamente.";
+                } else {
+                    // Mostrar mensaje de bienvenida
+                    const mensajeBienvenida = document.getElementById(
+                        "generalErrorMessage"
+                    );
+                    mensajeBienvenida.innerText = "¡Bienvenido!";
+                    mensajeBienvenida.style.color = "green"; // Cambiar el color a verde
+
+                    // Redirigir después de 1 segundos
+                    setTimeout(() => {
+                        window.location.href = "./index.html";
+                    }, 1000);
+                }
             }
         });
 }
 
+// Ejecutar la función de acceso cuando la página se cargue
 window.onload = function () {
     acceso();
 };
-/* const username = prompt(
-            "Por favor, ingrese su nombre de usuario:",
-            "Jota"
-        );
-        if (username === null) {
-            alert("Cancelando intento de acceso.");
-            accesoPermitido = true;
-            break;
-        }
-
-        const userpass = prompt("Por favor, ingrese la contraseña:", "dejame");
-
-        if (userpass === null) {
-            alert("Cancelando intento de acceso.");
-            accesoPermitido = true;
-            break;
-        }
-        if (username === "Jota" && userpass === "dejame") {
-            accesoPermitido = true;
-            alert("Credenciales correctas. Accediendo...");
-            document.getElementById("mainContent").style.display = "block";
-            document.getElementById("navContent").style.display = "block";
-            document.getElementById("picContent").style.display = "block";
-            document.getElementByid("loginContent").style.display = "none";
-        } else {
-            alert("Las credenciales ingresadas no son válidas.");
-            let reintento = confirm("¿Desea intentarlo de nuevo?");
-            if (!reintento) {
-                accesoPermitido = true;
-                alert("Cancelando intento de acceso.");
-            }
-        }
-    }
-}
-
-    */
