@@ -80,7 +80,7 @@ function acceso() {
 
                     // Redirigir después de 1 segundos
                     setTimeout(() => {
-                        window.location.href = "./index.html";
+                        window.location.href = "./ejercicios/index.html";
                     }, 1000);
                 }
             }
