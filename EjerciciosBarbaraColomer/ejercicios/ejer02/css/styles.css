@@ -120,3 +120,11 @@ color: rgb(104, 48, 118);
   color: rgb(255,250,250,0.90);
   text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
 }
+.footerGeneral{
+    /* para que el footer quede abajo en el pie de la pagina
+   y no donde se termine el texto de la caja anterior */
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}

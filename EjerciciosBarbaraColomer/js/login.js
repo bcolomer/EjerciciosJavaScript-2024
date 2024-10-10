@@ -3,7 +3,7 @@
 // Función para validar el usuario
 function validarUsuario(username) {
     // Expresión regular para solo letras y longitud mínima de 3 caracteres
-    const usernameRegex = /^[A-Za-z]{3,}$/;
+    const usernameRegex = /^[A-Za-zÑñ]{3,}$/;
     let result = true;
 
     // Limpiar mensajes de error anteriores
@@ -71,6 +71,8 @@ function acceso() {
                     document.getElementById("generalErrorMessage").innerText =
                         "Los datos ingresados no son válidos. Por favor, inténtelo nuevamente.";
                 } else {
+                    //guardar la cookie
+                    setCookie("username", username, 15); // Guardar la cookie con nombre de usuario por 15 segundos
                     // Mostrar mensaje de bienvenida
                     const mensajeBienvenida = document.getElementById(
                         "generalErrorMessage"
@@ -86,8 +88,4 @@ function acceso() {
             }
         });
 }
-
-// Ejecutar la función de acceso cuando la página se cargue
-window.onload = function () {
-    acceso();
-};
+acceso();

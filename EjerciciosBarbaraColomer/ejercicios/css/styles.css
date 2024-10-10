@@ -49,22 +49,13 @@ body {
   background-color: rgb(128,128,128,0.25);
   color: rgb(174, 45, 152);
 }
-/* 
-#mainContent{
-    display: none;
-}
-
-#navContent{
-    display: none;
-}
-
-#picContent{
-    display: none;
-}
-
-
- */
-
+/* .logOut{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 20px;
+} */
 .container {
   display: flex;
   justify-content: center;
@@ -123,6 +114,7 @@ body {
     width: 100%; 
     margin: 1.5em ; 
   }
+ 
 }
 
 .footer {
@@ -131,4 +123,13 @@ body {
   padding: 20px;
   color: rgb(255,250,250,0.90);
   text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
+  
+}
+.footerGeneral{
+    /* para que el footer quede abajo en el pie de la pagina
+   y no donde se termine el texto de la caja anterior */
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }

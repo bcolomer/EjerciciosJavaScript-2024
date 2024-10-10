@@ -20,15 +20,15 @@ El proyecto está compuesto por los siguientes archivos y carpetas:
 - **index.html**: Archivo que solicita informacion de usuario.
 - **img/**: Carpeta que contiene imágenes como el `favicon.ico` y la foto de perfil (`perfil.jpg`).
 - **css/**: Carpeta que contiene los estilos CSS (`styles.css`).
-- **js/**: Carpeta con el archivo JavaScript para la lógica de inicio de sesión (`login.js`).
+- **js/**: Carpeta con el archivo JavaScript para la lógica de inicio de sesión y manejo de cookies.(`login.js`)(`setCookie.js`)(`getCookie.js`)(`eraseCookie.js`).
 - **ejercicios/**: Carpeta que contiene subcarpetas para cada ejercicio y un index con el archivo principal que muestra la estructura y contenido HTML.
 ---
 
 ## Funcionalidades
 
-### 1. **Login sin sesión**
+### 1. **Login con sesión**
    - Al cargar la página, se solicita al usuario que ingrese su nombre de usuario y contraseña en un formulario.
-   - Si las credenciales son correctas (Usuario: **Jota**, Contraseña: **dejame**), el contenido principal de la página se despliega. De lo contrario, se permite al usuario volver a intentarlo.
+   - Si las credenciales son correctas (Usuario: **Jota**, Contraseña: **dejame**), el contenido principal de la página se despliega y se guarda la cookie correspondiente. De lo contrario, se permite al usuario volver a intentarlo.
 
 ### 2. **Sistema de tarjetas de ejercicios**
    - Cada tarjeta muestra un título, una breve descripción y un enlace a la solución del ejercicio correspondiente.
@@ -48,6 +48,10 @@ El proyecto está compuesto por los siguientes archivos y carpetas:
 
 ### 3. **JavaScript**
    - **login.js**: Contiene toda la lógica de autenticación y muestra el contenido principal en función de las credenciales correctas.
+   - **setCookie.js**: Contiene toda la lógica de la creación de cookies..
+   - **getCookie.js**: Contiene la obtencion de la cookie y chequea su vencimiento por segundo para desviarte una vez haya expirado.
+   - **eraseCookie.js**: Contiene toda la lógica de la eliminacion de la cookie creada.
+
    - **Nota**: Se ha decidido no utilizar el atributo `required` en los inputs para poder poner un mensaje más amigable dentro del mismo formulario.
 
 ---
