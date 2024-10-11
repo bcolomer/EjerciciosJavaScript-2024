@@ -16,7 +16,7 @@ setInterval(() => {
     let session = getCookie("username");
     if (!session) {
         alert(
-            "La sesión ha expirado. Por favor introduzca sus credenciales nuevamente"
+            "Has estado trasteando la página demasiado tiempo y La sesión ha expirado. Por favor introduce tus credenciales nuevamente"
         );
         window.location.href = "../index.html"; // Redirige al login o realiza alguna otra acción
     }
