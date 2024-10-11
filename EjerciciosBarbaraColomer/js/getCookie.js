@@ -16,7 +16,7 @@ setInterval(() => {
     let session = getCookie("username");
     if (!session) {
         alert(
-            "Has estado trasteando la página demasiado tiempo y La sesión ha expirado. Por favor introduce tus credenciales nuevamente"
+            "Has estado trasteando la página demasiado tiempo y la galletita se ha quemado. Por favor introduce tus credenciales nuevamente"
         );
         window.location.href = "../index.html"; // Redirige al login o realiza alguna otra acción
     }
