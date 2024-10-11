@@ -1,5 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+body {
+  background-color: rgb(251, 237, 251);
+  text-align: justify;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+}
+.header {
+  background-color: #26787c; ;
+  text-align: center;
+  padding: 5px;
+  color: rgb(255,250,250,0.90);
+  text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+.header-text {
+  text-align: center; 
+  flex-grow: 1; 
+}
+.topnav {
+  overflow: hidden;
+  background-color: #44cba180;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: rgba(1, 1, 1, 0.9);
+  text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
+.topnav a:hover {
+  background-color: rgb(128,128,128,0.25);
+  color: rgb(174, 45, 152);
+}
 .contentForm{
   margin: 0 auto;
   margin-top: 30px;
@@ -104,6 +141,23 @@ button:focus{
     color: red;
     font-size: 20px;
     top: -25px;
+}
+
+.footer {
+  background-color: rgb(38, 120, 124);
+  text-align: center;
+  padding: 20px;
+  color: rgb(255,250,250,0.90);
+  text-shadow: 2px 2px 4px rgb(0,0,0,0.75);
+  
+}
+.footerGeneral{
+    /* para que el footer quede abajo en el pie de la pagina
+   y no donde se termine el texto de la caja anterior */
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
 /* Estilos para versiones móviles */

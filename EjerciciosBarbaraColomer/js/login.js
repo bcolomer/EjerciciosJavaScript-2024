@@ -72,7 +72,7 @@ function acceso() {
                         "Los datos ingresados no son válidos. Por favor, inténtelo nuevamente.";
                 } else {
                     //guardar la cookie
-                    setCookie("username", username, 15); // Guardar la cookie con nombre de usuario por 15 segundos
+                    setCookie("username", username, 600); // Guardar la cookie con nombre de usuario por 15 segundos
                     // Mostrar mensaje de bienvenida
                     const mensajeBienvenida = document.getElementById(
                         "generalErrorMessage"
