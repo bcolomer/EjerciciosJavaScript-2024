@@ -13,7 +13,8 @@ function getCookie(name) {
 }
 /**expirar la cookie y volver al login, que chequee cada segundo si la cookie esta activa:*/
 setInterval(() => {
-    let session = getCookie("username");
+    const session = getCookie("username");
+
     if (!session) {
         alert(
             "Has estado trasteando la página demasiado tiempo y la galletita se ha quemado. Por favor introduce tus credenciales nuevamente"

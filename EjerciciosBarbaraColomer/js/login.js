@@ -72,12 +72,13 @@ function acceso() {
                         "Los datos ingresados no son válidos. Por favor, inténtelo nuevamente.";
                 } else {
                     //guardar la cookie
-                    setCookie("username", username, 30); // Guardar la cookie con nombre de usuario por 30 segundos
+                    setCookie("username", username, 3000); // Guardar la cookie con nombre de usuario por 300 segundos
                     // Mostrar mensaje de bienvenida
                     const mensajeBienvenida = document.getElementById(
                         "generalErrorMessage"
                     );
-                    mensajeBienvenida.innerText = "¡Bienvenido!";
+                    mensajeBienvenida.innerText =
+                        "¡Bienvenido " + username + "!";
                     mensajeBienvenida.style.color = "green"; // Cambiar el color a verde
 
                     // Redirigir después de 1 segundos
