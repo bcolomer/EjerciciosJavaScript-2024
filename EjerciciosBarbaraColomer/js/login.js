@@ -71,8 +71,10 @@ function acceso() {
                     document.getElementById("generalErrorMessage").innerText =
                         "Los datos ingresados no son válidos. Por favor, inténtelo nuevamente.";
                 } else {
-                    //guardar la cookie
-                    setCookie("username", username, 3000); // Guardar la cookie con nombre de usuario por 300 segundos
+                    //guardar la session
+                    sessionStorage.setItem("username", username); // Guardar el nombre de usuario en sessionStorage
+                    sessionStorage.setItem("sessionStart", Date.now()); // Guardar el tiempo de inicio de sesión
+
                     // Mostrar mensaje de bienvenida
                     const mensajeBienvenida = document.getElementById(
                         "generalErrorMessage"

@@ -1,6 +1,6 @@
 # Proyecto: Ejemplos – FUNDAMENTOS DE JS (ES6)
 
-Este proyecto es una demostración de los conceptos fundamentales de JavaScript (ES6) aplicados al desarrollo web del lado del cliente. Consiste en un sistema básico de autenticación (con sesion) y ejemplos prácticos organizados en tarjetas.
+Este proyecto es una demostración de los conceptos fundamentales de JavaScript (ES6) aplicados al desarrollo web del lado del cliente. Consiste en un sistema básico de autenticación (con sesión) y ejemplos prácticos organizados en tarjetas.
 
 ## Contenido
 
@@ -20,7 +20,7 @@ El proyecto está compuesto por los siguientes archivos y carpetas:
 - **index.html**: Archivo que solicita información de usuario.
 - **img/**: Carpeta que contiene imágenes como el `favicon.ico` y la foto de perfil (`perfil.jpg`).
 - **css/**: Carpeta que contiene los estilos CSS (`styles.css`).
-- **js/**: Carpeta con archivos JavaScript para la lógica de inicio de sesión y manejo de cookies (`login.js`, `setCookie.js`, `getCookie.js`, `eraseCookie.js`).
+- **js/**: Carpeta con archivos JavaScript para la lógica de inicio de sesión y manejo de sesión (`login.js`, `sessionStorage.js`, `cambiobase.js`, `minicalculadora.js`, `cambiotexto.js`, `api.js`).
 - **ejercicios/**: Carpeta que contiene subcarpetas para cada ejercicio y un índice con el archivo principal que muestra la estructura y contenido HTML.
 
 ---
@@ -29,17 +29,20 @@ El proyecto está compuesto por los siguientes archivos y carpetas:
 
 ### 1. **Login con sesión**
    - Al cargar la página, se solicita al usuario que ingrese su nombre de usuario y contraseña en un formulario.
-   - Si las credenciales son correctas (Usuario: **Jota**, Contraseña: **dejame**), el contenido principal de la página se despliega y se guarda la cookie correspondiente que estará activa por 30 segundos. De lo contrario, se permite al usuario volver a intentarlo.
+   - Si las credenciales son correctas (Usuario: **Jota**, Contraseña: **dejame**), el contenido principal de la página se despliega y se guarda en `sessionStorage`. De lo contrario, se permite al usuario volver a intentarlo.
 
 ### 2. **Sistema de ejercicios**
    - **Sección Número**
        - **Ejercicio 1: Mini calculadora**
-           - Una calculadora simple que permite realizar operaciones básicas como suma, resta, multiplicación y división. Tambien la posibilidad de obtener la parte entera o decimal de un numero, y conseguir la secuencia de Fibonaccio o el factorial.
+           - Una calculadora simple que permite realizar operaciones básicas como suma, resta, multiplicación y división. También tiene la posibilidad de obtener la parte entera o decimal de un número, y conseguir la secuencia de Fibonacci o el factorial.
        - **Ejercicio 2: Calculadora de bases**
            - Permite convertir números entre diferentes bases (binario, octal, hexadecimal) utilizando el método `toString(base)` de JavaScript.
+       - **Ejercicio 3: Manipulación de Strings**
+           - Ejercicios que incluyen la manipulación de cadenas.
+       - **Ejercicio 4: API de Buscador de Películas**
+           - Implementación de un buscador de películas utilizando una API, donde los usuarios pueden buscar información sobre sus películas favoritas.
 
-### 3. **Botón interactivo**
-   - Un botón que muestra un resultado al hacer clic utilizando la función `mostrar`.
+
 
 ---
 
@@ -56,12 +59,19 @@ El proyecto está compuesto por los siguientes archivos y carpetas:
      - Implementada en `minicalculadora.js`, permite realizar operaciones aritméticas básicas.
    - **Calculadora de bases**:
      - Implementada en `cambiobase.js`, utiliza `parseFloat` para la entrada del usuario y `toString(base)` para las conversiones entre bases.
+   - **Manipulación de Strings**:
+     - Implementada en `manipulacionStrings.js`, contiene funciones para manipular y analizar cadenas de texto.
+   - **API de Buscador de Películas**:
+     - Implementada en `buscadorPeliculas.js`, utiliza una API pública para buscar y mostrar información sobre películas.
 
 ### 4. **JavaScript**
-   - **login.js**: Contiene toda la lógica de autenticación y muestra el contenido principal en función de las credenciales correctas.
-   - **setCookie.js**: Contiene toda la lógica para la creación de cookies.
-   - **getCookie.js**: Contiene la obtención de la cookie y chequea su vencimiento por segundo para redirigir al usuario una vez haya expirado.
-   - **eraseCookie.js**: Contiene toda la lógica para la eliminación de la cookie creada.
+   - **login.js**: Contiene toda la lógica de autenticación y muestra el contenido principal en función de las credenciales correctas, utilizando `sessionStorage` para mantener la sesión.
+   - **sessionStorage.js**: Contiene toda la lógica para el manejo de `sessionStorage`.
+   - **minicalculadora.js**: Contiene toda la lógica de la mini calculadora.
+   - **cambiobase.js**: Contiene la lógica para la calculadora de bases.
+   - **cambiotexto.js**: Contiene la lógica para manipular texto según las funcionalidades requeridas.
+   - **manipulacionStrings.js**: Contiene funciones para trabajar con cadenas de texto.
+   - **buscadorPeliculas.js**: Contiene la lógica para interactuar con la API de películas.
 
    - **Nota**: Se ha decidido no utilizar el atributo `required` en los inputs para poder poner un mensaje más amigable dentro del mismo formulario.
 
